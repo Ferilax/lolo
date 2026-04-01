@@ -1,0 +1,46 @@
+/*
+	<div class="tab-system">
+		<div class="tab-trigger" data-tab="tab-1">Tab 1</div>
+		<div class="tab-trigger" data-tab="tab-2">Tab 2</div>
+
+		<div class="tab-content" data-tab="tab-1">Content 1</div>
+		<div class="tab-content" data-tab="tab-2">
+			Content 2
+			<div class="tab-system">
+				<div class="tab-trigger" data-tab="tab-inner-1">Inner Tab 1</div>
+				<div class="tab-trigger" data-tab="tab-inner-2">Inner Tab 2</div>
+
+				<div class="tab-content" data-tab="tab-inner-1">Inner Content 1</div>
+				<div class="tab-content" data-tab="tab-inner-2">Inner Content 2</div>
+			</div>
+		</div>
+	</div>
+*/
+
+
+.tab-system {
+	.tab-trigger {
+		position: relative;
+		transition: .3s;
+
+		padding-left: 16px;
+		padding-right: 18px;
+		height: 52px;
+		background: #EEEFF1;
+
+		gap: 8px;
+
+		font-size: 16px;
+	}
+
+	.tab-content {
+		height: 0;
+		overflow: hidden;
+
+		&._active {
+			height: unset;
+			overflow: visible;
+			flex: 1 1 auto;
+		}
+	}
+}

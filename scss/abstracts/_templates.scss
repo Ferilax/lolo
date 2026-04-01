@@ -1,0 +1,32 @@
+%hide-scroll {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+%button-core {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100px;
+	transition: .2s;
+}
+
+%button-black {
+	@extend %button-core;
+
+	font-weight: 500;
+	height: 50px;
+
+	background: var(--black);
+	color: white;
+}
+
+%button-white {
+	@extend %button-black;
+	background: white;
+	color: #919191;
+}

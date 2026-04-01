@@ -1,0 +1,37 @@
+@mixin responsive-font($min-size, $max-size, $min-vw: 375px, $max-vw: 1640px) {
+
+	// Проверяем единицы измерения
+	@if unitless($min-size) {
+		$min-size: $min-size * 1px;
+	}
+
+	@if unitless($max-size) {
+		$max-size: $max-size * 1px;
+	}
+
+	// Рассчитываем формулу
+	$slope: calc(($max-size - $min-size) / ($max-vw - $min-vw));
+	$y-intercept: calc($min-size - $slope * $min-vw);
+
+	// Генерируем CSS
+	font-size: clamp(#{$min-size},
+		#{$y-intercept} + #{$slope * 100vw},
+		#{$max-size});
+}
+
+@mixin hover {
+
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin ellipsis($lines) {
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

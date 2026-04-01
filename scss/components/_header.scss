@@ -1,0 +1,54 @@
+header {
+	margin-top: 28px;
+
+	.container {
+		display: flex;
+		gap: 8px;
+	}
+
+	.logo {
+		margin-right: auto;
+	}
+
+	.generations {
+		@extend %button-core;
+		height: 52px;
+		padding-left: 16px;
+		padding-right: 18px;
+		gap: 4px;
+
+		background: #EEEFF1;
+	}
+
+	.profile {
+		@extend %button-core;
+		height: 52px;
+		padding-right: 12px;
+		padding-left: 16px;
+		background: #EEEFF1;
+		gap: 8px;
+	}
+
+	.profile-avatar {
+		height: 24px;
+		width: 24px;
+		flex: 0 0 24px;
+		border-radius: 50%;
+		contain: paint;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.auth {
+		@extend %button-core;
+		background: var(--blue);
+		color: white;
+		font-weight: 500;
+		padding: 0 40px;
+		height: 50px;
+	}
+}

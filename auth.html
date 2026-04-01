@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Авторизация</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/splide-core.min.css">
+</head>
+
+<body class="auth_page">
+	<header>
+		<div class="container">
+			<div class="logo">
+				<img src="img/icons/logo.svg" alt="">
+			</div>
+		</div>
+	</header>
+
+	<section class="modal auth-modal _always-open">
+		<div class="modal__body">
+			<h3 class="title">Авторизация</h3>
+			<div class="subtitle">Для доступа к сервису необходимо войти</div>
+
+			<form action="#" class="form">
+				<div class="group">
+					<div class="group-title">Ваша почта</div>
+					<input type="email" required placeholder="chef@lolo.ai">
+				</div>
+
+				<div class="group">
+					<div class="group-title">Пароль</div>
+					<label class="input-container">
+						<input type="password" required placeholder="****">
+						<button class="eye-opened" type="button">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g opacity="0.4">
+									<path
+										d="M12.0004 5C16.7314 5.00015 19.6355 8.19768 21.0209 10.2705C21.4857 10.9661 21.7178 11.3145 21.6966 11.957C21.6755 12.5995 21.4089 12.9469 20.8754 13.6416C19.2863 15.7106 16.1132 18.9998 12.0004 19C7.88739 19 4.7135 15.7106 3.12437 13.6416C2.59088 12.947 2.32427 12.5994 2.30308 11.957C2.28193 11.3145 2.51399 10.9661 2.97887 10.2705C4.36419 8.19764 7.26898 5 12.0004 5ZM12.0004 8C9.79121 8 8.00035 9.79086 8.00035 12C8.00035 14.2091 9.79121 16 12.0004 16C14.2093 15.9998 16.0004 14.209 16.0004 12C16.0004 9.79097 14.2093 8.00018 12.0004 8Z"
+										fill="#7E7E7E" />
+								</g>
+							</svg>
+						</button>
+						<button class="eye-closed" type="button">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 10C9.09997 12.2312 14.9 12.2312 20 10" stroke="#222222" stroke-linecap="round" />
+								<path d="M12 12V15" stroke="#222222" stroke-linecap="round" />
+								<path d="M6 11.3L5 12.9" stroke="#222222" stroke-linecap="round" />
+								<path d="M18 11.3L19 12.9" stroke="#222222" stroke-linecap="round" />
+							</svg>
+						</button>
+					</label>
+				</div>
+
+				<div class="group">
+					<button class="button">Войти</button>
+					<div class="pp">
+						Продолжая, вы подтверждаете свое согласие с
+						<a href="">правилами пользования</a> и
+						<a href="">политикой конфиденциальности</a>
+					</div>
+				</div>
+
+				<div class="register">
+					<span>Нет акаунта?</span>
+					<a href="" class="link">Зарегистрироваться</a>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<script src="js/index.js"></script>
+</body>
+
+</html>

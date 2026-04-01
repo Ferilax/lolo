@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "nullstyle";
+@import "vars";
+
+@import "abstracts/mixins";
+@import "abstracts/templates";
+
+@import "components/header";
+@import "components/tabs";
+@import "components/tag";
+@import "components/modal";
+
+
+.main_page {
+	@import "main";
+}
+
+.profile_page {
+	background: url("../img/bg-2.svg") 50% / cover no-repeat #F8F8F8;
+
+	@import "profile";
+}
+
+.shop_page {
+	background: url("../img/bg-2.svg") 50% / cover no-repeat #F8F8F8;
+
+	@import "shop";
+}
+
+html {
+	&._lock-scroll {
+		overflow: hidden;
+		scrollbar-gutter: stable;
+		position: relative;
+	}
+}
+
+body {
+	color: var(--black);
+	font-family: Manrope;
+	letter-spacing: 3%;
+	background: #F8F8F8;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	padding: 0 var(--container-padding);
+	margin: auto;
+}
+
+.auth_page {
+	background: url("../img/bg-2.svg") 50% / cover no-repeat #F8F8F8;
+
+	header {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
