@@ -77,12 +77,12 @@
 		const clickedRegisterSwitcher = e.target.closest("#register .link")
 
 		if (clickedLogInSwitcher) {
-			loginPart.style.contentVisibility = "hidden"
-			registerPart.style.contentVisibility = "unset"
+			loginPart.style.display = "none"
+			registerPart.style.display = "flex"
 		}
 		if (clickedRegisterSwitcher) {
-			loginPart.style.contentVisibility = "unset"
-			registerPart.style.contentVisibility = "hidden"
+			loginPart.style.display = "flex"
+			registerPart.style.display = "none"
 		}
 	})
 
