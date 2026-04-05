@@ -4,11 +4,20 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	@media (width < 1024px) {
+		margin-top: 80px;
+	}
+
+	@media (width < 768px) {
+		margin-top: 40px;
+	}
 }
 
 
 .title {
 	font-size: 32px;
+	text-align: center;
 	font-weight: 500;
 }
 
@@ -115,5 +124,89 @@ main {
 		background: none;
 		font-weight: 500;
 		color: #919191;
+	}
+
+	._desktop {}
+
+	._mobile {
+		display: none;
+	}
+
+	@media (width < 1024px) {
+		margin-top: 40px;
+
+		._desktop {
+			display: none;
+		}
+
+		._mobile {
+			display: block;
+		}
+
+		.container {
+			flex-direction: column;
+		}
+
+		.balance._mobile {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.balance__button {
+			margin: 0;
+			padding: 0 32px;
+		}
+
+		.left {
+			flex: unset;
+		}
+
+		.archive-title {
+			font-size: 20px;
+		}
+	}
+
+	@media (width < 768px) {
+		.gallery {
+			margin-top: 18px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.take-photo {
+			height: 100px;
+			grid-column: span 3;
+		}
+
+		.balance {
+			padding: 24px;
+		}
+
+		.archive-title {
+			font-size: 18px;
+		}
+
+		.left {
+			padding: 20px;
+		}
+
+		.right {
+			gap: 8px;
+		}
+
+		.history {
+			span {
+				width: 100px;
+				text-align: center;
+				line-height: 1.2;
+			}
+		}
+
+		.logout {
+			width: fit-content;
+			padding: 0 20px;
+			margin: 0 auto;
+		}
 	}
 }

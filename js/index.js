@@ -12,6 +12,9 @@ async function loadModules() {
 	if (has(".modal")) {
 		import("./modal.js")
 	}
+	if (has(".splide")) {
+		import("./sliders.js")
+	}
 }
 
 // Запускаем после загрузки DOM

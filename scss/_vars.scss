@@ -5,4 +5,8 @@
 	--container-padding: 28px;
 
 	--z-modal: 100;
+
+	@media (width < 1024px) {
+		--container-padding: 20px;
+	}
 }

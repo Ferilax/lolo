@@ -7,10 +7,10 @@
 
 	function createPopover(modalSelector, triggerSelector) {
 		const modal = document.querySelector(modalSelector)
-		const trigger = document.querySelector(triggerSelector)
+		const triggers = document.querySelectorAll(triggerSelector)
 		const HTMLElement = document.documentElement
 
-		if (!modal || !trigger) return
+		if (!modal || triggers.length === 0) return
 
 		// Переключатель появления поповера
 		function scrollSwitcher(action) {
@@ -38,9 +38,12 @@
 			}
 		}
 
-		trigger.addEventListener("click", () => {
-			scrollSwitcher("lock")
+		triggers.forEach(trigger => {
+			trigger.addEventListener("click", () => {
+				scrollSwitcher("lock")
+			})
 		})
+
 	}
 
 	createPopover(".auth-modal", ".auth-modal-trigger")
@@ -64,4 +67,23 @@
 			eyeOpened.style.display = "flex"
 		}
 	})
+
+	// auth modal -------------------------------------------------------------------------------------
+	const authModal = document.querySelector(".auth-modal")
+	const loginPart = authModal.querySelector("#login")
+	const registerPart = authModal.querySelector("#register")
+	authModal.addEventListener("click", (e) => {
+		const clickedLogInSwitcher = e.target.closest("#login .link")
+		const clickedRegisterSwitcher = e.target.closest("#register .link")
+
+		if (clickedLogInSwitcher) {
+			loginPart.style.contentVisibility = "hidden"
+			registerPart.style.contentVisibility = "unset"
+		}
+		if (clickedRegisterSwitcher) {
+			loginPart.style.contentVisibility = "unset"
+			registerPart.style.contentVisibility = "hidden"
+		}
+	})
+
 }())
